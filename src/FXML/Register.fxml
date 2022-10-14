@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="cssSupervisor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="948.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER_LEFT" layoutX="59.0" layoutY="119.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="429.0" prefWidth="150.0">
+         <children>
+            <Label id="labelsRegistros" layoutX="30.0" layoutY="101.0" prefHeight="62.0" prefWidth="174.0" text="DNI" textFill="#808080">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label id="labelsRegistros" layoutX="30.0" layoutY="164.0" prefHeight="62.0" prefWidth="175.0" text="Nombre" textFill="#808080">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label id="labelsRegistros" layoutX="30.0" layoutY="226.0" prefHeight="62.0" prefWidth="178.0" text="Apellidos" textFill="#808080">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label id="labelsRegistros" layoutX="28.0" layoutY="475.0" prefHeight="60.0" prefWidth="110.0" text="Contraseña" textFill="#808080">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label id="labelsRegistros" prefHeight="62.0" prefWidth="174.0" text="Sexo" textFill="#808080">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label id="labelsRegistros" prefHeight="62.0" prefWidth="175.0" text="Teléfono" textFill="#808080">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label id="labelsRegistros" prefHeight="62.0" prefWidth="178.0" text="Doctor" textFill="#808080">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="215.0" layoutY="130.0" prefHeight="412.0" prefWidth="243.0" spacing="22.0">
+         <children>
+            <TextField fx:id="tDNI" layoutX="225.0" layoutY="176.0" prefHeight="4.0" prefWidth="244.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tNombre" layoutX="225.0" layoutY="239.0" prefHeight="4.0" prefWidth="244.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tApellido" layoutX="223.0" layoutY="426.0" prefHeight="4.0" prefWidth="244.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="tPass" layoutX="225.0" layoutY="302.0" prefHeight="4.0" prefWidth="244.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            <TextField fx:id="tSexo" alignment="BASELINE_CENTER" prefHeight="4.0" prefWidth="244.0" promptText="Masculino/Femenino">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tTel" prefHeight="4.0" prefWidth="244.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="tDoctor" prefHeight="4.0" prefWidth="244.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+         </children>
+      </VBox>
+      <Text layoutX="124.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de Paciente" wrappingWidth="359.80902099609375">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Text>
+      <Button fx:id="btVolver" alignment="BASELINE_LEFT" layoutX="817.0" layoutY="39.0" mnemonicParsing="false" onAction="#volver" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: orange;" text="Volver">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="879.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/back-arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="56.0" layoutX="48.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/iconosuperiorlogin.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="338.0" fitWidth="466.0" layoutX="468.0" layoutY="134.0" opacity="0.89" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/logo.png" />
+         </image>
+      </ImageView>
+      <Button id="rich-blue" fx:id="btnReg" alignment="BASELINE_CENTER" layoutX="636.0" layoutY="497.0" mnemonicParsing="false" onAction="#registro" prefHeight="39.0" prefWidth="150.0" style="-fx-background-color: blue;" text="Registrarse" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <TextField fx:id="tTipo" alignment="BASELINE_CENTER" editable="false" layoutX="435.0" layoutY="36.0" opacity="0.0" prefHeight="44.0" prefWidth="49.0" text="1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

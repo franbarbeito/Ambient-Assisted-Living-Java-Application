@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="-14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="948.0" style="-fx-background-color: white;">
+         <children>
+            <Button fx:id="btnCerrarSesion" layoutX="873.0" layoutY="8.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="45.0" style="-fx-background-color: white;" textFill="#0a0a0a" AnchorPane.bottomAnchor="551.0" AnchorPane.rightAnchor="30.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="58.0" fitWidth="52.0" layoutX="35.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/iconosuperiorlogin.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="labelNombreUsuario" layoutX="210.0" layoutY="23.0" onDragDetected="#labelNombreusuario" prefHeight="43.0" prefWidth="122.0">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="61.0" layoutY="103.0" text="Datos del paciente ">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="65.0" layoutY="163.0" prefHeight="334.0" prefWidth="274.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.324951171875" minWidth="10.0" prefWidth="139.53778076171875" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.41307067871094" minWidth="10.0" prefWidth="192.96221923828125" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="24.0" prefWidth="75.0" text="Nombre" textFill="GREY">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label text="Apellidos" textFill="GREY" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label text="DNI" textFill="GREY" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label text="Teléfono" textFill="GREY" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="49.0" prefWidth="137.0" text="Contraseña" textFill="GREY" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name1" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <Label fx:id="apellidos1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <Label fx:id="dni1" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <Label fx:id="tel1" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+                  <PasswordField fx:id="contra1" disable="true" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="17.0" />
+                     </font></PasswordField>
+               </children>
+            </GridPane>
+            <Button fx:id="btGraficar" layoutX="619.0" layoutY="531.0" mnemonicParsing="false" onAction="#graficar1" prefHeight="39.0" prefWidth="97.0" style="-fx-background-color: #2665F8#2665F8;" text="Ver mis datos" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <TabPane layoutX="408.0" layoutY="89.0" prefHeight="452.0" prefWidth="518.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                  <Tab text="Temperatura">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <LineChart fx:id="grafica_temp" layoutX="9.0" layoutY="10.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </LineChart>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Pulsometro">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <LineChart fx:id="grafica_pulso" prefHeight="420.0" prefWidth="518.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </LineChart>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+               
+                  <Tab text="Alarma">
+                        <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <LineChart fx:id="grafAlarma" layoutX="9.0" layoutY="10.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </LineChart>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <ImageView fx:id="imgCerrarSesion" fitHeight="39.0" fitWidth="52.0" layoutX="876.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/logout.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btCerrarSesion" layoutX="865.0" layoutY="13.0" mnemonicParsing="false" onAction="#logoutEnviarActionPerformed" prefHeight="39.0" prefWidth="61.0" style="-fx-background-color: transparent;" />
+            <Label layoutX="32.0" layoutY="561.0" prefHeight="25.0" prefWidth="110.0" text="Doctor Asociado:" textFill="GREY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="doctor1" layoutX="148.0" layoutY="561.0" prefHeight="25.0" prefWidth="110.0" />
+            <Button fx:id="btnMensajeria" layoutX="210.0" layoutY="511.0" mnemonicParsing="false" onAction="#ClicMensaje" prefHeight="39.0" prefWidth="97.0" style="-fx-background-color: #2665F8#2665F8;" text="Crear ticket" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="labelApellidoUsuario" layoutX="339.0" layoutY="23.0" prefHeight="43.0" prefWidth="122.0">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="28.0" fitWidth="97.0" layoutX="103.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/fossil.png" />
+               </image>
+            </ImageView>
+            <DatePicker fx:id="idDate" layoutX="445.0" layoutY="56.0" />
+            <Label layoutX="679.0" layoutY="55.0" prefHeight="24.0" prefWidth="75.0" text="Fecha:" textFill="GREY">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="fecha1" layoutX="743.0" layoutY="56.0" prefHeight="26.0" prefWidth="122.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

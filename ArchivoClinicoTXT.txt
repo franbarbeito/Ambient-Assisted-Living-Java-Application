@@ -1,0 +1,6 @@
+3,01234567L,Juan,Dominguez,675882606,masculino,1234,doctor1@doctor.com,44444444A,55555555K,66666666Q,77777777B,88888888Y,99999999R,1111112L,1111113C
+3,76543210J,Pedro,Torres,675882606,masculino,1234,doctor2@doctor.com,11111114K,11111115E,11111116T,null,null,null,null,null
+3,87654321X,Francisco,Munica,675882606,masculino,1234,doctor3@doctor.com,11111117R,11111118W,null,null,null,null,null,null
+3,11111111H,Teresa,Bandija,675882606,femenino,1234,doctor4@doctor.com,11111119A,null,null,null,null,null,null,null
+3,22222222J,Debora,Casas,675882606,femenino,1234,doctor5@doctor.com,11111110V,null,null,null,null,null,null,null
+3,33333333P,Marcela,Mentos,675882606,masculino,1234,doctor6@doctor.com,00000004G,00000003A,00000002W,00000001R,null,null,null,null

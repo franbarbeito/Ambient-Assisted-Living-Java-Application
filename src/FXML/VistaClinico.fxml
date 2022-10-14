@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="apMensajeria" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="1292.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="25.0" layoutY="180.0" text="Dar de alta usuario">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font></Label>
+      <Button fx:id="btnCerrarSesion" layoutX="1208.0" layoutY="14.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="47.0" prefWidth="48.0" style="-fx-background-color: transparent;" textFill="WHITE" AnchorPane.rightAnchor="21.0">
+         <graphic>
+            <ImageView fitHeight="51.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/logout.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <GridPane layoutX="20.0" layoutY="196.0" prefHeight="339.0" prefWidth="300.0" AnchorPane.bottomAnchor="143.0" AnchorPane.topAnchor="196.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="firstname" onKeyTyped="#SoloLetras" prefHeight="26.0" prefWidth="300.0" promptText="Nombre" />
+            <TextField fx:id="lastname" onKeyTyped="#SoloLetras" prefHeight="25.0" prefWidth="300.0" promptText="Apellidos" GridPane.rowIndex="1" />
+            <TextField fx:id="email" prefHeight="31.0" prefWidth="250.0" promptText="Email" GridPane.rowIndex="2" />            
+            <TextField fx:id="contrasena" prefHeight="27.0" prefWidth="249.0" promptText="Contrasena" GridPane.rowIndex="3" />
+            <TextField fx:id="dnipaciente" prefHeight="27.0" prefWidth="249.0" promptText="DNI paciente" GridPane.rowIndex="4" />
+            <TextField fx:id="dniadmin" prefHeight="27.0" prefWidth="249.0" promptText="DNI Clinico" GridPane.rowIndex="5" />
+            <TextField fx:id="dnifamiliar" prefHeight="27.0" prefWidth="249.0" promptText="DNI Cuidador" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="25.0" layoutY="541.0" prefHeight="123.0" prefWidth="300.0" AnchorPane.bottomAnchor="14.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="adduser" mnemonicParsing="false" onAction="#add_choice_user_familiar" prefHeight="31.0" prefWidth="311.0" style="-fx-background-color: #2665F8#2665F8;" text="Añadir Usuario" textFill="WHITE" />
+            <Button fx:id="clearFields" mnemonicParsing="false" onAction="#clearFields" prefHeight="31.0" prefWidth="303.0" style="-fx-background-color: #2665F8#2665F8;" text="Cancelar" textFill="WHITE" GridPane.rowIndex="1" />
+            <Button mnemonicParsing="false" onAction="#CargarInformacion" prefHeight="30.0" prefWidth="315.0" style="-fx-background-color: #2665F8#2665F8;" text="Cargar Informacion" textFill="WHITE" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <TableView fx:id="pacientetable" layoutX="371.0" layoutY="79.0" prefHeight="573.0" prefWidth="899.0" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="371.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="79.0">
+         <columns>
+            <TableColumn fx:id="Nombrecolunm" prefWidth="138.0" text="Nombre" />
+            <TableColumn fx:id="ApellidosColumn" prefWidth="163.0" text="Apellidos" />
+            <TableColumn fx:id="MailColumn" prefWidth="106.0" text="Email" />
+            <TableColumn fx:id="telefonocolumn" prefWidth="132.0" text="Telefono" />
+            <TableColumn fx:id="dni_pacientecolumn" prefWidth="115.0" text="DNI paciente" />
+            <TableColumn fx:id="dni_admincolumn" prefWidth="91.0" text="DNI del admin" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="Ver" layoutX="371.0" layoutY="40.0" mnemonicParsing="false" onAction="#VerClick" prefHeight="31.0" prefWidth="90.0" style="-fx-background-color: #2665F8#2665F8;" text="Ver" textFill="#fffdfd" />
+      <Button fx:id="BTN_borrar_usuario" layoutX="607.0" layoutY="43.0" mnemonicParsing="false" onAction="#borrar_usuarios" text="Borrar" />
+      <ImageView fitHeight="112.0" fitWidth="164.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="162.0" layoutY="59.0" prefHeight="25.0" prefWidth="90.0" text="¡Bienvenido,">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="doctor1" layoutX="250.0" layoutY="63.0" prefHeight="17.0" prefWidth="73.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="323.0" layoutY="63.0" text="!">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font></Label>
+      <Button fx:id="btnMensajeria" layoutX="121.0" layoutY="115.0" mnemonicParsing="false" onAction="#ClicMensaje" prefHeight="53.0" prefWidth="109.0" style="-fx-background-color: #2665F8#2665F8;" text="Ticket" textFill="#fffdfd" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.controladorTicket">
+   <children>
+      <SplitPane dividerPositions="0.6" layoutY="-2.0" prefHeight="600.0" prefWidth="800.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="tablaRegistroMensajes" layoutX="3.0" layoutY="50.0" prefHeight="425.0" prefWidth="468.0">
+                    <columns>
+                        <TableColumn fx:id="asuntoTabla" prefWidth="112.9380087852478" text="Asunto" />
+                        <TableColumn fx:id="destinatarioTabla" prefWidth="112.5" text="Destinatario" />
+                        <TableColumn fx:id="ticketTabla" prefWidth="252.0" text="Ticket " />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="modificarBT" layoutX="97.0" layoutY="492.0" mnemonicParsing="false" onAction="#modificarticket" prefHeight="37.0" prefWidth="281.0" text="Modificar " />
+                  <Button fx:id="eliminarBT" layoutX="97.0" layoutY="541.0" mnemonicParsing="false" onAction="#eliminarticket" prefHeight="37.0" prefWidth="281.0" text="Eliminar " />
+                  <TextField fx:id="filterTicket" layoutX="109.0" layoutY="10.0" prefHeight="18.0" prefWidth="96.0" />
+                  <Label layoutX="14.0" layoutY="14.0" text="Buscar Ticket:" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="280.0">
+               <children>
+                  <Button fx:id="enviarBT" layoutX="22.0" layoutY="505.0" mnemonicParsing="false" onAction="#enviarticket" prefHeight="37.0" prefWidth="281.0" text="Enviar " />
+                  <Button fx:id="nuevoticketBT" layoutX="22.0" layoutY="555.0" mnemonicParsing="false" onAction="#nuevoticket" prefHeight="37.0" prefWidth="281.0" text="Nuevo  Ticket " />
+                  <Label layoutX="14.0" layoutY="23.0" text="Asunto: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="18.0" layoutY="90.0" text="Destinatario:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="asuntoM" layoutX="13.0" layoutY="56.0" prefHeight="26.0" prefWidth="289.0" />
+                  <TextField fx:id="destinatarioM" layoutX="14.0" layoutY="122.0" prefHeight="26.0" prefWidth="289.0" />
+                  <Label layoutX="14.0" layoutY="160.0" text="Ticket:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="ticketM" layoutX="13.0" layoutY="190.0" prefHeight="306.0" prefWidth="289.0" promptText="Escriba aqui su ticket..." />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

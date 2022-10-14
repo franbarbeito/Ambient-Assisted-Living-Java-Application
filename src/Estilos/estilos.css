@@ -1,0 +1,34 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+ .root {
+     /*-fx-background-image: url("C:\\Users\\cryst\\Desktop\\Captura.PNG");*/
+     
+}
+
+#cssSupervisor{
+	-fx-background-color: #2D3447;
+}
+
+#rich-blue {
+    -fx-background-color: 
+        #000000,
+        linear-gradient(#7ebcea, #2f4b8f),
+        linear-gradient(#426ab7, #263e75),
+        linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+
+#rich-blue:hover {
+  -fx-background-color:#dae7f3;
+}
+
+#rich-blue Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.8) , 0, 0.0 , 0 , 1);
+}
+
+#labelsRegistros{
+	-fx-text-fill: white;
+}

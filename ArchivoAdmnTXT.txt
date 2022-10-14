@@ -1,0 +1,5 @@
+0,77464438R,Francisco,Barbeito,633884973,masculino,1234,fran@fran.com
+0,03179104K,Jorge,Martinez,675882606,masculino,1234,jorge@jorge.com
+0,71308177N,Isabel,Sutil,628136301,femenino,1234,isabel@isabel.com
+0,53762279D,Sara,Gil,685360798,femenino,1234,sara@sara.com
+0,35582608K,Jorge,Campos,697816626,masculino,1234,campos@campos.com
